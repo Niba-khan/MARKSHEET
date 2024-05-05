@@ -98,6 +98,17 @@ if(rollNum == 12345){
     console.log(chalk.black.underline.bold(`Chemistry Marks = ${physics} out of 100`))
     console.log(chalk.bgYellowBright.red.bold(`Obtain Marks = ${obtainMarks}  Total Marks ${totalMarks}`))
     console.log(chalk.bgMagentaBright.black.bold(`Percentage = ${percentage}%`))
+    if (percentage >=80){
+        console.log(chalk.bgRedBright.yellow.bold("passed: Grade A+"));
+    } else if(percentage >=70){
+        console.log(chalk.bgRedBright.yellow.bold("passed: Grade A"));
+    }else if (percentage >=60){
+        console.log(chalk.bgRedBright.yellow.bold("passed: Grade C"));
+    }else if(percentage >=50){
+        console.log(chalk.bgRedBright.yellow.bold("passed: Grade D"));
+    }else {
+        console.log(chalk.bgBlueBright.white.bold("Fail"));
+    }
 } 
 else{
     console.log(chalk.bgMagenta.bold("Invalid Roll Number"))
